@@ -87,7 +87,7 @@ public class DrawDemo
     }
 
     /**
-     * 
+     * Dibujar triángulo
      */
     public void drawTriangle(int xPos, int yPos)
     {
@@ -96,6 +96,18 @@ public class DrawDemo
         for(int i = 0; i < 2; i++) {
             pen.move(200);
             pen.turn(120);
+        }
+    }
+    
+    /**
+     * Dibujar pentágono
+     */
+    public void drawPentagon() 
+    {
+        Pen pen = new Pen(200, 100, myCanvas);
+        for(int i = 0; i < 5; i++) {
+            pen.move(100);
+            pen.turn(360/5);
         }
     }
 }
