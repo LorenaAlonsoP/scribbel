@@ -129,4 +129,17 @@ public class DrawDemo
             System.out.println("Error, debe haber más de 2 lados");
         }
     }
+    
+    /** 
+     * Dibujar espiral
+     */
+    public void drawSpiral ()
+    {
+        Pen pen = new Pen(250, 200, myCanvas);
+        pen.setColor(Color.BLACK);
+        for(int i = 2; i > 50;  i++) {
+            pen.move(i * 4);
+            pen.turn(90);
+        }
+    }
 }
