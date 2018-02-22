@@ -73,16 +73,29 @@ public class DrawDemo
             int green = random.nextInt(256);
             int blue = random.nextInt(256);
             pen.setColor(new Color(red, green, blue));
-            
+
             pen.randomSquiggle();
         }
     }
-    
+
     /**
      * Clear the screen.
      */
     public void clear()
     {
         myCanvas.erase();
+    }
+
+    /**
+     * 
+     */
+    public void drawTriangle(int xPos, int yPos)
+    {
+        Pen pen = new Pen(xPos, yPos, myCanvas);
+        pen.setColor(Color.GREEN);
+        for(int i = 0; i < 2; i++) {
+            pen.move(200);
+            pen.turn(120);
+        }
     }
 }
