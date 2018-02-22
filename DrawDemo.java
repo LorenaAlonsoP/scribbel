@@ -98,16 +98,35 @@ public class DrawDemo
             pen.turn(120);
         }
     }
-    
+
     /**
      * Dibujar pentágono
      */
     public void drawPentagon() 
     {
         Pen pen = new Pen(200, 100, myCanvas);
+        pen.setColor(Color.GREEN);
         for(int i = 0; i < 5; i++) {
             pen.move(100);
             pen.turn(360/5);
+        }
+    }
+
+    /**
+     * Dibujar un poligono regular
+     */
+    public void drawPolygon( int n) 
+    {
+        if(n > 2) {
+            Pen pen = new Pen(200, 100, myCanvas);
+            pen.setColor(Color.GREEN);
+            for(int i = 0; i < 5; i++) {
+                pen.move(5);
+                pen.turn(360/n);
+            }
+        }
+        else {
+            System.out.println("Error, debe haber más de 2 lados");
         }
     }
 }
